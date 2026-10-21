@@ -1,0 +1,243 @@
+Source code of the website (index.html – HTML, CSS and JavaScript).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshers' Induction Programme</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0e1020;
+color:white;
+}
+header{
+background:#0a0c19;
+padding:15px;
+text-align:center;
+}
+nav{
+margin-top:10px;
+}
+nav a{
+color:#35d0ba;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+nav a:hover{
+color:#ffb454;
+}
+}
+.page{
+display:none;
+padding:20px;
+}
+.active{
+display:block;
+}
+section{
+background:#171a30;
+padding:20px;
+border-radius:10px;
+margin:15px;
+}
+table{
+width:100%;
+border-collapse:collapse;
+}
+}
+th,td{
+}
+table,th,td{
+border:1px solid white;
+padding:10px;
+input,select,textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+}
+button{
+padding:10px;
+background:#ffb454;
+border:none;
+cursor:pointer;
+}
+footer{
+text-align:center;
+padding:15px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Freshers' Induction Programme</h1>
+<p>SRM TRP Engineering College | First Year B.E.</p>
+<nav>
+<a href="#" onclick="showPage('home')">Home</a>
+<a href="#" onclick="showPage('about')">About</a>
+<a href="#" onclick="showPage('programme')">Programme</a>
+<a href="#" onclick="showPage('register')">Register</a>
+<a href="#" onclick="showPage('contact')">Contact</a>
+</nav>
+</header>
+<!-- Home -->
+<div id="home" class="page active">
+<section>
+<h2>Welcome To SRM TRP Engineering College</h2>
+<p>
+A 3 Day Induction Programme For First Year B.E Students.
+</p>
+<button onclick="showPage('register')">
+Register Now
+</button>
+<button onclick="showPage('programme')">
+View Programme
+</button>
+</section>
+<section>
+<h2>What To Expect</h2>
+<ul>
+<li>Welcome Address</li>
+<li>Campus And Library Tour</li>
+<li>Department Orientation</li>
+<li>Talk By Alumni</li>
+<li>Cultural Activities</li>
+</ul>
+</section>
+</div>
+<!-- About -->
+<div id="about" class="page">
+<section>
+<h2>About Programme</h2>
+<p>
+The Freshers' Induction Programme helps new students settle into
+college life, meet faculty and seniors, and learn about college
+rules and facilities.
+</p>
+<h3>Objectives</h3>
+<ol>
+<li>Welcome First Year Students</li>
+<li>Introduce Departments And Faculty</li>
+<li>Explain Rules And Facilities</li>
+<li>Help Students Make New Friends</li>
+</ol>
+</section>
+</div>
+<!-- Programme -->
+<div id="programme" class="page">
+<section>
+<h2>Programme Schedule</h2>
+<table>
+<caption>Activities for the three days</caption>
+<thead>
+<tr>
+<th scope="col">Day</th>
+<th scope="col">Activity</th>
+<th scope="col">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Day 1</th>
+<td>Inauguration And Welcome Address</td>
+<td>9:30 AM</td>
+</tr>
+<tr>
+<th scope="row">Day 1</th>
+<td>Campus And Library Tour</td>
+<td>11:30 AM</td>
+</tr>
+<tr>
+<th scope="row">Day 2</th>
+<td>Department Orientation</td>
+<td>10:00 AM</td>
+</tr>
+<tr>
+<th scope="row">Day 2</th>
+<td>Talk By Alumni</td>
+<td>2:00 PM</td>
+</tr>
+<tr>
+<th scope="row">Day 3</th>
+<td>Cultural Activities</td>
+<td>10:00 AM</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<!-- Register -->
+<div id="register" class="page">
+<section>
+<h2>Registration Form</h2>
+<form>
+<label for="name">Name</label>
+<input type="text" id="name" required>
+<label for="email">Email</label>
+<input type="email" id="email" required>
+<label for="phone">Mobile Number</label>
+<input type="tel" id="phone" required>
+<label for="dob">Date Of Birth</label>
+<input type="date" id="dob">
+<label for="dept">Department</label>
+<select id="dept">
+<option>Computer Science And Engineering</option>
+<option>Information Technology</option>
+<option>Electronics And Communication</option>
+<option>Electrical And Electronics</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+</select>
+<label for="comments">Comments</label>
+<textarea id="comments" rows="4"></textarea>
+<button type="submit">
+Submit
+</button>
+<button type="reset">
+Clear
+</button>
+</form>
+</section>
+</div>
+<!-- Contact -->
+<div id="contact" class="page">
+<section>
+<h2>Contact Us</h2>
+<p>
+Induction Coordinator<br>
+First Year Department<br>
+SRM TRP Engineering College
+</p>
+<p>
+Email :
+induction@example.com
+</p>
+<p>
+Phone :
++91 9876543210
+</p>
+<p>
+Office Hours :
+Monday To Friday
+10:00 AM To 12:30 PM
+</p>
+</section>
+</div>
+<footer>
+<p>
+</p>
+</footer>
+SRM TRP Engineering College
+<script>
+function showPage(pageId){
+let pages=document.querySelectorAll('.page');
+pages.forEach(function(page){
+page.classList.remove('active');
+});
+document.getElementById(pageId).classList.add('active');
+}
+</script>
+</body>
+</html>
